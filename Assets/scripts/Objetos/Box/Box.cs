@@ -9,6 +9,7 @@ public class Box : MonoBehaviour
     public Sprite[] img = new Sprite[4];
     SpriteRenderer sr;
     public Sprite fim;
+    private bool atacando = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,12 +49,14 @@ public class Box : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
+     
         if (collision.gameObject.tag == "PlayerAttack")
         {
             life--;
         }
     }
-
+   
+   
+        
 
 }

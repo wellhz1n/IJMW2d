@@ -9,21 +9,18 @@ public class Controls : MonoBehaviour
     Rigidbody2D rg;
     Animator a;
     SpriteRenderer s;
-    float Horizontal;
+    public static float Horizontal;
     //Mudar para PlayerAttack
-    private GameObject playerAttack;
-    BoxCollider2D pa;
-    SpriteRenderer pr;
+    private BoxCollider2D playerAttack;
+
     //FIM++++++++++++
     // Start is called before the first frame update
     void Start()
     {
         //Mudar para PlayerAttack
-        playerAttack = GameObject.Find("PlayerAttack");
-        pa = playerAttack.GetComponent<BoxCollider2D>();
-        pr = playerAttack.GetComponent<SpriteRenderer>();
-        pa.enabled = false;
-        pr.enabled = false;
+        playerAttack = GameObject.Find("PlayerAttack").GetComponent<BoxCollider2D>();
+        GameObject.Find("PlayerAttack").GetComponent<SpriteRenderer>().enabled = false;
+        playerAttack.enabled = false;
         //FIM++++++++++++
         rg = GetComponent<Rigidbody2D>();
         a = GetComponent<Animator>();
@@ -33,39 +30,36 @@ public class Controls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Horizontal = Input.GetAxis("Horizontal");
+
+
         //Mudar para PlayerAttack
         if (Input.GetKeyDown(KeyCode.F))
         {
-            if (pa.enabled)
-            {
-                DesativaPA();
-            }
-            else
-            {
-                pa.enabled = true;
-                pr.enabled = true;
 
-                Invoke("DesativaPA", 0.5f);
-            }
-   
-            
+            a.SetBool("PA", true);
+
 
         }
         //FIM++++++++++++
 
         //Movimento Horizonatal
 
-        Horizontal = Input.GetAxis("Horizontal");
         if (Horizontal < 0)
         {
             s.flipX = true;
+          
         }
         else
         {
             s.flipX = false;
+            //Tudo isso vai ser excluido e trocado por animacao
+
+          
+
         }
-        a.SetFloat("Horizontal", Mathf.Abs(vel*Horizontal));
-        rg.velocity = new Vector2( vel*Horizontal, rg.velocity.y);
+        a.SetFloat("Horizontal", Mathf.Abs(vel * Horizontal));
+        rg.velocity = new Vector2(vel * Horizontal, rg.velocity.y);
 
 
 
@@ -73,13 +67,14 @@ public class Controls : MonoBehaviour
         // Pulo
 
 
-     
+
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && Player.isGrounded)
-        {   
-            
-            if(Player.numeroDePulos<3){
-                rg.AddForce(new Vector2(rg.velocity.x, jump*5));
-                a.SetBool("jump",true);
+        {
+
+            if (Player.numeroDePulos < 3)
+            {
+                rg.AddForce(new Vector2(rg.velocity.x, jump * 5));
+                a.SetBool("jump", true);
                 Player.numeroDePulos++;
             }
             else
@@ -90,19 +85,17 @@ public class Controls : MonoBehaviour
         }
         else
         {
-            a.SetBool("jump",false);
+            a.SetBool("jump", false);
 
         }
     }
 
-
+    public void FimAttack()
+    {
+        a.SetBool("PA", false);
+    }
 
     //Mudar para PlayerAttack
-    private void DesativaPA()
-    {
-        pa.enabled = false;
-        pr.enabled = false;
 
-    }
     //FIM++++++++++++
 }

@@ -9,8 +9,8 @@ public class Controlador : MonoBehaviour
     {
        
     }
-    void Update()
+    void FixedUpdate()
     {
-       transform.position = new Vector3(posicaoDoPlayer.position.x, posicaoDoPlayer.position.y, -10);
+       transform.position = new Vector3((posicaoDoPlayer.position.x)-Time.deltaTime,(posicaoDoPlayer.position.y)*Time.deltaTime + 1, -10);
     }
 }

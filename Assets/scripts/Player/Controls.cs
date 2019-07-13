@@ -81,7 +81,11 @@ public class Controls : MonoBehaviour
                 rg.AddForce(new Vector2(rg.velocity.x, jump*5));
                 a.SetBool("jump",true);
                 Player.numeroDePulos++;
-            } 
+            }
+            else
+            {
+                a.SetBool("jump", false);
+            }
 
         }
         else

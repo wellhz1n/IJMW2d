@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     }
     public void TiraVida(){
 
-    Life -= 10*Time.deltaTime;
+    Life -= 20*Time.deltaTime;
 
     }
 

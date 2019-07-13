@@ -6,7 +6,9 @@ public class Player : MonoBehaviour
 {
     [SerializeField]
     private  float Life = Mathf.Abs(100f);
-    public Vector2 posicaoSpawn;
+    public static  Vector2 posicaoSpawn;
+    public static bool isGrounded;
+   public static int numeroDePulos = 0;
     // Start is called before the first frame update
     void Start()
     {   

@@ -691,7 +691,6 @@ GameObject:
   - component: {fileID: 919640044}
   - component: {fileID: 919640043}
   - component: {fileID: 919640042}
-  - component: {fileID: 919640046}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Chao
@@ -1037,18 +1036,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &919640046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919640041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd0cdc956c4807a4d96dca6884ee4092, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1029656071
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,7 +1047,7 @@ GameObject:
   - component: {fileID: 1029656072}
   m_Layer: 0
   m_Name: Objetos
-  m_TagString: Untagged
+  m_TagString: Chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1109,53 +1096,6 @@ Material:
     m_TexEnvs: []
     m_Floats: []
     m_Colors: []
---- !u!1 &1286378190
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1286378191}
-  - component: {fileID: 1286378192}
-  m_Layer: 0
-  m_Name: ColisaoDosPes
-  m_TagString: colisaoDosPes
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1286378191
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1286378190}
-  m_LocalRotation: {x: 0.0000051539396, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.137, y: 0.59, z: 0}
-  m_LocalScale: {x: 1.2457892, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1694701607}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0.001, y: 0, z: 0}
---- !u!58 &1286378192
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1286378190}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!1001 &1385209114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1163,11 +1103,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1029656072}
     m_Modifications:
-    - target: {fileID: 5143013491840859973, guid: b2b4ab1e4f2edd14f9841abf170e78e7,
-        type: 3}
-      propertyPath: m_Name
-      value: Caixa_0 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 5143013491840859974, guid: b2b4ab1e4f2edd14f9841abf170e78e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1222,6 +1157,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5143013491840859973, guid: b2b4ab1e4f2edd14f9841abf170e78e7,
+        type: 3}
+      propertyPath: m_Name
+      value: Caixa_0 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2b4ab1e4f2edd14f9841abf170e78e7, type: 3}
@@ -1946,11 +1886,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1029656072}
     m_Modifications:
-    - target: {fileID: 5143013491840859973, guid: b2b4ab1e4f2edd14f9841abf170e78e7,
-        type: 3}
-      propertyPath: m_Name
-      value: Caixa_0
-      objectReference: {fileID: 0}
     - target: {fileID: 5143013491840859974, guid: b2b4ab1e4f2edd14f9841abf170e78e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2006,6 +1941,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5143013491840859973, guid: b2b4ab1e4f2edd14f9841abf170e78e7,
+        type: 3}
+      propertyPath: m_Name
+      value: Caixa_0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2b4ab1e4f2edd14f9841abf170e78e7, type: 3}
 --- !u!1001 &5406203227957775093
@@ -2020,15 +1960,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5406203227471172309, guid: 647017fed0e7dc14bbfe12ab8e2fd098,
-        type: 3}
-      propertyPath: m_TagString
-      value: colisaoDosPes
-      objectReference: {fileID: 0}
     - target: {fileID: 5406203227471172310, guid: 647017fed0e7dc14bbfe12ab8e2fd098,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.06
+      value: -8.17
       objectReference: {fileID: 0}
     - target: {fileID: 5406203227471172310, guid: 647017fed0e7dc14bbfe12ab8e2fd098,
         type: 3}
@@ -2080,16 +2015,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5406203227471172307, guid: 647017fed0e7dc14bbfe12ab8e2fd098,
-        type: 3}
-      propertyPath: m_UsedByEffector
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 233615163290639935, guid: 647017fed0e7dc14bbfe12ab8e2fd098,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5955421293260747988, guid: 647017fed0e7dc14bbfe12ab8e2fd098, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 647017fed0e7dc14bbfe12ab8e2fd098, type: 3}

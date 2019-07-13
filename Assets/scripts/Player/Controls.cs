@@ -72,14 +72,15 @@ public class Controls : MonoBehaviour
 
         // Pulo
 
-        int numeroDePulos = 0;
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+
+     
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && Player.isGrounded)
         {   
             
-            if(numeroDePulos<3){
+            if(Player.numeroDePulos<3){
                 rg.AddForce(new Vector2(rg.velocity.x, jump*5));
                 a.SetBool("jump",true);
-                numeroDePulos++;
+                Player.numeroDePulos++;
             } 
 
         }
